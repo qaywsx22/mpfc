@@ -14,7 +14,6 @@ public class LNFAction extends AbstractAction
     
     public LNFAction( String aLNFName, Component host)
     {
-        
         lnfName = aLNFName;
         _host = host;
         putValue(Action.NAME, "lnfAction");
@@ -29,7 +28,7 @@ public class LNFAction extends AbstractAction
     {
         try
         {
-            UIManager.setLookAndFeel(lnfName);
+       		UIManager.setLookAndFeel(lnfName);
             
             if ( "Windows".equals(UIManager.getLookAndFeel().getID()) )
             {

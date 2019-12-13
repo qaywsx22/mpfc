@@ -233,6 +233,13 @@ public class Mpfc extends JFrame
         mi.addActionListener(a);
         sm.add(mi);
 
+        mi = new JRadioButtonMenuItem("Material L&F");
+        lnfGroup.add(mi);
+        mi.setActionCommand("L&F_MAT");
+        a = (Action)actions.get("lnf_material");
+        mi.addActionListener(a);
+        sm.add(mi);
+
         m.add(sm);
         
         mi = new JMenuItem("Configuration...");
@@ -365,6 +372,9 @@ public class Mpfc extends JFrame
 
         a = new LNFAction("com.sun.java.swing.plaf.windows.WindowsLookAndFeel", this);
         actions.put("lnf_windows", a);
+
+        a = new LNFAction("mdlaf.MaterialLookAndFeel", this);
+        actions.put("lnf_material", a);
 
         a = new SelectAction(left);
         actions.put("left_select", a);
